@@ -279,8 +279,6 @@ class SimulatorBase : public wxFrame
 		wxSpinCtrlDouble* m_spS_AWS;
 		wxStaticText* m_staticText4133111;
 		wxCheckBox* m_cbSHDT;
-		wxCheckBox* m_cbSpare;
-		wxCheckBox* m_cbSpare2;
 		wxCheckBox* m_cbSHDM;
 		wxCheckBox* m_cbSHDG;
 		wxCheckBox* m_cbSSOG;
@@ -290,6 +288,8 @@ class SimulatorBase : public wxFrame
 		wxCheckBox* m_cbSTWS;
 		wxCheckBox* m_cbSAWA;
 		wxCheckBox* m_cbSAWS;
+		wxCheckBox* m_cbSPITCH1;
+		wxCheckBox* m_cbSHeel1;
 		wxStaticText* m_staticTDBT;
 		wxSpinCtrlDouble* m_spS_AirT1;
 		wxStaticText* m_staticText13431121;
@@ -443,15 +443,15 @@ class SimulatorBase : public wxFrame
 		wxCheckBox* m_cbOptimize112;
 		wxCheckBox* m_cbXDRVPitch;
 		wxCheckBox* m_cbOptimize113;
-		wxCheckBox* m_cbXDRVRoll;
-		wxCheckBox* m_cbOptimize121;
 		wxCheckBox* m_cbXDRVHeel;
-		wxCheckBox* m_cbOptimize131;
+		wxCheckBox* m_cbOptimize121;
 		wxCheckBox* m_cbXDREngT1;
-		wxCheckBox* m_cbOptimize141;
+		wxCheckBox* m_cbOptimize131;
 		wxCheckBox* m_cbXDREngT2;
-		wxCheckBox* m_cbOptimize181;
+		wxCheckBox* m_cbOptimize141;
 		wxCheckBox* m_cbTWS1;
+		wxCheckBox* m_cbOptimize181;
+		wxCheckBox* m_cbXDRVRoll;
 		wxCheckBox* m_cbOptimize151;
 		wxCheckBox* m_cbAWA1;
 		wxCheckBox* m_cbOptimize191;
@@ -472,11 +472,15 @@ class SimulatorBase : public wxFrame
 		wxCheckBox* m_cbXDRVTG;
 		wxCheckBox* m_cbXDRVWR;
 		wxCheckBox* m_cbXDRVWT;
-		wxCheckBox* m_cbXDRXDR;
+		wxCheckBox* m_bXDRONOFF;
 		wxPanel* m_panelAP;
 		wxPanel* m_panelTest;
 		wxCheckBox* m_cbSSTW;
 		wxCheckBox* m_cbSCOG;
+		wxStdDialogButtonSizer* m_sdbSizer511;
+		wxButton* m_sdbSizer511OK;
+		wxButton* m_sdbSizer511Apply;
+		wxButton* m_sdbSizer511Cancel;
 		wxPanel* m_panelConfigure;
 		wxCheckBox* m_cbHDT511;
 		wxCheckBox* m_cbCOG511;
@@ -514,7 +518,7 @@ class SimulatorBase : public wxFrame
 		wxStaticText* m_stGPSLongD31;
 		wxTimer m_timer;
 
-		SimulatorBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Vessel Data Message Simulator"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 884,647 ), long style = wxCAPTION|wxCLOSE_BOX|wxDEFAULT_FRAME_STYLE|wxFRAME_FLOAT_ON_PARENT|wxFRAME_NO_TASKBAR|wxRESIZE_BORDER|wxSYSTEM_MENU|wxTAB_TRAVERSAL );
+		SimulatorBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Vessel Data Message Simulator"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 772,638 ), long style = wxCAPTION|wxRESIZE_BORDER|wxSTAY_ON_TOP|wxTAB_TRAVERSAL );
 
 		~SimulatorBase();
 
@@ -530,6 +534,7 @@ class SimulatorPreferences : public wxDialog
 	protected:
 		wxStdDialogButtonSizer* m_sdbSizer;
 		wxButton* m_sdbSizerOK;
+		wxButton* m_sdbSizerApply;
 		wxButton* m_sdbSizerCancel;
 
 		// Virtual event handlers, overide them in your derived class
@@ -602,7 +607,7 @@ class SimulatorPreferences : public wxDialog
 		wxCheckBox* m_bUseXDRMB;
 		wxCheckBox* m_bUseDBT;
 
-		SimulatorPreferences( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Preferences"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 941,676 ), long style = wxCAPTION|wxRESIZE_BORDER );
+		SimulatorPreferences( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Preferences"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 941,676 ), long style = wxCAPTION|wxSTAY_ON_TOP|wxSYSTEM_MENU );
 		~SimulatorPreferences();
 
 };
@@ -655,7 +660,7 @@ class SimulatorPreferences1 : public wxDialog
 		wxCheckListBox* m_cblFields;
 		wxCheckBox* m_cbUseLocalTime;
 
-		SimulatorPreferences1( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Simulator Preferences"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 964,556 ), long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER );
+		SimulatorPreferences1( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Simulator Preferences"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 964,556 ), long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxSTAY_ON_TOP );
 		~SimulatorPreferences1();
 
 };
@@ -693,7 +698,7 @@ class CursorPositionDialog : public wxDialog
 		wxStaticText* m_stHeading221;
 		wxStaticText* m_stSpeed211;
 
-		CursorPositionDialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Cursor Position"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 404,322 ), long style = wxDEFAULT_DIALOG_STYLE );
+		CursorPositionDialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Cursor Position"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 404,322 ), long style = wxDEFAULT_DIALOG_STYLE|wxSTAY_ON_TOP );
 		~CursorPositionDialog();
 
 };
@@ -724,7 +729,7 @@ class NewPositionDialog : public wxDialog
 		wxTextCtrl* m_tLongitudeDegrees;
 		wxTextCtrl* m_tLongitudeMinutes;
 
-		NewPositionDialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("New Position"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 429,506 ), long style = wxDEFAULT_DIALOG_STYLE );
+		NewPositionDialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("New Position"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 429,506 ), long style = wxDEFAULT_DIALOG_STYLE|wxSTAY_ON_TOP );
 		~NewPositionDialog();
 
 };
@@ -833,7 +838,7 @@ class ConfigurationDialogBase : public wxDialog
 		wxSpinCtrl* m_sToDegree;
 		wxTextCtrl* m_tByDegrees;
 
-		ConfigurationDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Simulator Configuration"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxDEFAULT_DIALOG_STYLE );
+		ConfigurationDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Simulator Configuration"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxDEFAULT_DIALOG_STYLE|wxSTAY_ON_TOP );
 		~ConfigurationDialogBase();
 
 };
@@ -914,7 +919,7 @@ class ConfigurationDialogBase2 : public wxDialog
 		wxSpinCtrl* m_sWindStrengthMax;
 		wxSpinCtrl* m_sWindStrengthStep;
 
-		ConfigurationDialogBase2( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Configuration Page 2"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER );
+		ConfigurationDialogBase2( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Configuration Page 2"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxSTAY_ON_TOP );
 		~ConfigurationDialogBase2();
 
 };
@@ -960,7 +965,7 @@ class RoutePositionDialog : public wxDialog
 		wxStaticText* m_stTacks;
 		wxStaticText* m_stWeatherData;
 
-		RoutePositionDialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Route Position"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 404,360 ), long style = wxDEFAULT_DIALOG_STYLE );
+		RoutePositionDialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Route Position"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 404,360 ), long style = wxDEFAULT_DIALOG_STYLE|wxSTAY_ON_TOP );
 		~RoutePositionDialog();
 
 };
@@ -987,7 +992,7 @@ class FilterRoutesDialogBase : public wxDialog
 
 	public:
 
-		FilterRoutesDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Filter Routes"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE );
+		FilterRoutesDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Filter Routes"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE|wxSTAY_ON_TOP );
 		~FilterRoutesDialogBase();
 
 };
@@ -1059,7 +1064,7 @@ class BoatDialogBase : public wxDialog
 	public:
 		wxGauge* m_gCrossOverChart;
 
-		BoatDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Boat"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER );
+		BoatDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Boat"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxSTAY_ON_TOP );
 		~BoatDialogBase();
 
 		void m_splitter2OnIdle( wxIdleEvent& )
@@ -1167,7 +1172,7 @@ class EditPolarDialogBase : public wxDialog
 
 	public:
 
-		EditPolarDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Edit Vessel Simulator Polar Information"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER );
+		EditPolarDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Edit Vessel Simulator Polar Information"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxSTAY_ON_TOP );
 		~EditPolarDialogBase();
 
 };
@@ -1256,7 +1261,7 @@ class SettingsDialogBase : public wxDialog
 		wxCheckListBox* m_cblFields;
 		wxCheckBox* m_cbUseLocalTime;
 
-		SettingsDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Simulator Settings"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER );
+		SettingsDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Simulator Settings"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxSTAY_ON_TOP );
 		~SettingsDialogBase();
 
 };
@@ -1309,7 +1314,7 @@ class PreferencesDialogBase : public wxDialog
 
 	public:
 
-		PreferencesDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Simulator Autopilot Route Preferences"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 666,448 ), long style = wxCAPTION|wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL );
+		PreferencesDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Simulator Autopilot Route Preferences"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 666,448 ), long style = wxCAPTION|wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxSTAY_ON_TOP|wxTAB_TRAVERSAL );
 		~PreferencesDialogBase();
 
 };
@@ -1341,7 +1346,7 @@ class StatisticsDialogBase : public wxDialog
 
 	public:
 
-		StatisticsDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Plugin Statistics"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE );
+		StatisticsDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Plugin Statistics"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE|wxSTAY_ON_TOP );
 		~StatisticsDialogBase();
 
 };
@@ -1366,7 +1371,7 @@ class ReportDialogBase : public wxDialog
 
 	public:
 
-		ReportDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Plugin Report"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxCLOSE_BOX|wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER );
+		ReportDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Plugin Report"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( -1,-1 ), long style = wxCLOSE_BOX|wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxSTAY_ON_TOP );
 		~ReportDialogBase();
 
 };
@@ -1392,7 +1397,7 @@ class AboutDialogBase : public wxDialog
 
 	public:
 
-		AboutDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("About Simulator"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE );
+		AboutDialogBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("About Simulator"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE|wxSTAY_ON_TOP );
 		~AboutDialogBase();
 
 };

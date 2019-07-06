@@ -111,7 +111,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	fgSizer221111->Add( m_stSpeed, 0, wxALL, 1 );
 
-	m_staticText8111111 = new wxStaticText( sbLongS->GetStaticBox(), wxID_ANY, _(" Kts "), wxDefaultPosition, wxDefaultSize, wxALIGN_LEFT );
+	m_staticText8111111 = new wxStaticText( sbLongS->GetStaticBox(), wxID_ANY, _("Kts "), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT );
 	m_staticText8111111->Wrap( -1 );
 	m_staticText8111111->SetFont( wxFont( 12, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false, wxT("Arial") ) );
 	m_staticText8111111->SetForegroundColour( wxSystemSettings::GetColour( wxSYS_COLOUR_BTNTEXT ) );
@@ -834,7 +834,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 	wxStaticBoxSizer* sbSizer482;
 	sbSizer482 = new wxStaticBoxSizer( new wxStaticBox( m_panelHelm, wxID_ANY, _("Spacer") ), wxVERTICAL );
 
-	sbSizer482->SetMinSize( wxSize( 475,-1 ) );
+	sbSizer482->SetMinSize( wxSize( 470,-1 ) );
 
 	bSizer1311->Add( sbSizer482, 1, wxEXPAND, 2 );
 
@@ -1050,7 +1050,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	fgSizer108131->Add( m_spPrn1, 0, wxALL, 2 );
 
-	m_staticText1341511 = new wxStaticText( sbSizer63->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText1341511 = new wxStaticText( sbSizer63->GetStaticBox(), wxID_ANY, _("PRN 1"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText1341511->Wrap( -1 );
 	fgSizer108131->Add( m_staticText1341511, 0, wxALL, 5 );
 
@@ -1068,7 +1068,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	fgSizer108131->Add( m_spPrn2, 0, wxALL, 2 );
 
-	m_staticText1341512 = new wxStaticText( sbSizer63->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText1341512 = new wxStaticText( sbSizer63->GetStaticBox(), wxID_ANY, _("PRN 2"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText1341512->Wrap( -1 );
 	fgSizer108131->Add( m_staticText1341512, 0, wxALL, 5 );
 
@@ -1083,7 +1083,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	fgSizer108131->Add( m_spPrn3, 0, wxALL, 2 );
 
-	m_staticText134151 = new wxStaticText( sbSizer63->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText134151 = new wxStaticText( sbSizer63->GetStaticBox(), wxID_ANY, _("PRN 3"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText134151->Wrap( -1 );
 	fgSizer108131->Add( m_staticText134151, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 
@@ -1098,7 +1098,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	fgSizer108131->Add( m_spPrn4, 0, wxALL, 2 );
 
-	m_staticText13451 = new wxStaticText( sbSizer63->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText13451 = new wxStaticText( sbSizer63->GetStaticBox(), wxID_ANY, _("PRN 4"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText13451->Wrap( -1 );
 	fgSizer108131->Add( m_staticText13451, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
 
@@ -1232,7 +1232,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 	fgSizer2881->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 
 	wxStaticBoxSizer* sbSizer632;
-	sbSizer632 = new wxStaticBoxSizer( new wxStaticBox( m_panelGPS, wxID_ANY, _("GPS Azmuth, Elevation and SNR") ), wxVERTICAL );
+	sbSizer632 = new wxStaticBoxSizer( new wxStaticBox( m_panelGPS, wxID_ANY, _("\"Minimum Accurate Fix 4 GPS\" Azmuth, Elevation and SNR") ), wxVERTICAL );
 
 	wxFlexGridSizer* fgSizer1081312;
 	fgSizer1081312 = new wxFlexGridSizer( 0, 4, 0, 0 );
@@ -2160,7 +2160,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 	fgSizer621->Add( sbSizer6611, 1, wxEXPAND, 2 );
 
 	wxStaticBoxSizer* sbSizer6532;
-	sbSizer6532 = new wxStaticBoxSizer( new wxStaticBox( m_panelXDR, wxID_ANY, _("Selector") ), wxVERTICAL );
+	sbSizer6532 = new wxStaticBoxSizer( new wxStaticBox( m_panelXDR, wxID_ANY, _("Dynamic Mode Enable Selector") ), wxVERTICAL );
 
 	wxFlexGridSizer* fgSizer108112;
 	fgSizer108112 = new wxFlexGridSizer( 0, 3, 0, 0 );
@@ -2179,66 +2179,66 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 	m_cbXDRBAR->SetValue(true);
 	fgSizer231->Add( m_cbXDRBAR, 0, wxALL, 2 );
 
-	m_cbDetect61 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Detect    "), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
+	m_cbDetect61 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Grib/RND"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
 	fgSizer231->Add( m_cbDetect61, 0, wxALL, 2 );
 
 	m_cbXDRATemp = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Air Temp"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbXDRATemp->SetValue(true);
 	fgSizer231->Add( m_cbXDRATemp, 0, wxALL, 2 );
 
-	m_cbOptimize62 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Optimize"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
+	m_cbOptimize62 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Grib/RND"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
 	fgSizer231->Add( m_cbOptimize62, 0, wxALL, 2 );
 
 	m_cbXDRWTemp = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Water Temp"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbXDRWTemp->SetValue(true);
 	fgSizer231->Add( m_cbXDRWTemp, 0, wxALL, 2 );
 
-	m_cbOptimize112 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Optimize"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
+	m_cbOptimize112 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Grib/RND"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
 	fgSizer231->Add( m_cbOptimize112, 0, wxALL, 2 );
 
 	m_cbXDRVPitch = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Vessel Pitch"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbXDRVPitch->SetValue(true);
 	fgSizer231->Add( m_cbXDRVPitch, 0, wxALL, 2 );
 
-	m_cbOptimize113 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Optimize"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
+	m_cbOptimize113 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Grib/PEM"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
 	fgSizer231->Add( m_cbOptimize113, 0, wxALL, 2 );
-
-	m_cbXDRVRoll = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Vessel Roll"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
-	m_cbXDRVRoll->SetValue(true);
-	fgSizer231->Add( m_cbXDRVRoll, 0, wxALL, 2 );
-
-	m_cbOptimize121 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Optimize"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
-	fgSizer231->Add( m_cbOptimize121, 0, wxALL, 2 );
 
 	m_cbXDRVHeel = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Vessel Heel"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbXDRVHeel->SetValue(true);
 	fgSizer231->Add( m_cbXDRVHeel, 0, wxALL, 2 );
 
-	m_cbOptimize131 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Optimize"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
-	fgSizer231->Add( m_cbOptimize131, 0, wxALL, 2 );
+	m_cbOptimize121 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Grib/PEM"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
+	fgSizer231->Add( m_cbOptimize121, 0, wxALL, 2 );
 
 	m_cbXDREngT1 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Engine Temp1"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbXDREngT1->SetValue(true);
 	fgSizer231->Add( m_cbXDREngT1, 0, wxALL, 2 );
 
-	m_cbOptimize141 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Optimize"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
-	fgSizer231->Add( m_cbOptimize141, 0, wxALL, 2 );
+	m_cbOptimize131 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("T/RND"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
+	fgSizer231->Add( m_cbOptimize131, 0, wxALL, 2 );
 
 	m_cbXDREngT2 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Engine Temp2"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbXDREngT2->SetValue(true);
 	fgSizer231->Add( m_cbXDREngT2, 0, wxALL, 2 );
 
-	m_cbOptimize181 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Optimize"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
-	fgSizer231->Add( m_cbOptimize181, 0, wxALL, 2 );
+	m_cbOptimize141 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("T/RND"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
+	fgSizer231->Add( m_cbOptimize141, 0, wxALL, 2 );
 
 	m_cbTWS1 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Spare"), wxDefaultPosition, wxDefaultSize, wxCHK_3STATE );
 	m_cbTWS1->SetValue(true);
 	fgSizer231->Add( m_cbTWS1, 0, wxALL, 2 );
 
+	m_cbOptimize181 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Optimize"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
+	fgSizer231->Add( m_cbOptimize181, 0, wxALL, 2 );
+
+	m_cbXDRVRoll = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("XDR 1"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
+	m_cbXDRVRoll->SetValue(true);
+	fgSizer231->Add( m_cbXDRVRoll, 0, wxALL, 2 );
+
 	m_cbOptimize151 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Optimize"), wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxCHK_3STATE );
 	fgSizer231->Add( m_cbOptimize151, 0, wxALL, 2 );
 
-	m_cbAWA1 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("Spare"), wxDefaultPosition, wxDefaultSize, wxCHK_3STATE );
+	m_cbAWA1 = new wxCheckBox( sbSizer6532->GetStaticBox(), wxID_ANY, _("XDR 2"), wxDefaultPosition, wxDefaultSize, wxCHK_3STATE );
 	m_cbAWA1->SetValue(true);
 	fgSizer231->Add( m_cbAWA1, 0, wxALL, 2 );
 
@@ -2298,7 +2298,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 	fgSizer6611->SetFlexibleDirection( wxBOTH );
 	fgSizer6611->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 
-	m_cbXDRMTW = new wxCheckBox( sbSizer6111->GetStaticBox(), wxID_ANY, _("MTW"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
+	m_cbXDRMTW = new wxCheckBox( sbSizer6111->GetStaticBox(), wxID_ANY, _("IIXDR (Barometer)"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbXDRMTW->SetValue(true);
 	m_cbXDRMTW->SetToolTip( _("$MTW") );
 
@@ -2350,11 +2350,11 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	fgSizer6611->Add( m_cbXDRVWT, 0, wxALL, 2 );
 
-	m_cbXDRXDR = new wxCheckBox( sbSizer6111->GetStaticBox(), wxID_ANY, _("XDR"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
-	m_cbXDRXDR->SetValue(true);
-	m_cbXDRXDR->SetToolTip( _("$MTW") );
+	m_bXDRONOFF = new wxCheckBox( sbSizer6111->GetStaticBox(), wxID_ANY, _("ALL IIXDR On/Off"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
+	m_bXDRONOFF->SetValue(true);
+	m_bXDRONOFF->SetToolTip( _("$MTW") );
 
-	fgSizer6611->Add( m_cbXDRXDR, 0, wxALL, 2 );
+	fgSizer6611->Add( m_bXDRONOFF, 0, wxALL, 2 );
 
 	wxStaticBoxSizer* sbSizer106;
 	sbSizer106 = new wxStaticBoxSizer( new wxStaticBox( sbSizer6111->GetStaticBox(), wxID_ANY, _("label") ), wxVERTICAL );
@@ -2694,7 +2694,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	fgSizer489->Add( m_staticTextSTW, 0, wxALL, 2 );
 
-	m_spS_STW = new wxSpinCtrlDouble( sbSizer452->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS, -50, 250, 0.000000, 0.1 );
+	m_spS_STW = new wxSpinCtrlDouble( sbSizer452->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS|wxSP_WRAP, -50, 250, 0.000000, 0.1 );
 	m_spS_STW->SetDigits( 1 );
 	m_spS_STW->SetForegroundColour( wxSystemSettings::GetColour( wxSYS_COLOUR_BTNTEXT ) );
 	m_spS_STW->SetBackgroundColour( wxSystemSettings::GetColour( wxSYS_COLOUR_APPWORKSPACE ) );
@@ -2778,7 +2778,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	fgSizer489->Add( m_staticTextSOG, 0, wxALL, 2 );
 
-	m_spS_SOG = new wxSpinCtrlDouble( sbSizer452->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS, -50, 250, 0.000000, 0.1 );
+	m_spS_SOG = new wxSpinCtrlDouble( sbSizer452->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS|wxSP_WRAP, -50, 250, 0.000000, 0.1 );
 	m_spS_SOG->SetDigits( 1 );
 	m_spS_SOG->SetForegroundColour( wxSystemSettings::GetColour( wxSYS_COLOUR_BTNTEXT ) );
 	m_spS_SOG->SetBackgroundColour( wxSystemSettings::GetColour( wxSYS_COLOUR_APPWORKSPACE ) );
@@ -2820,7 +2820,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	fgSizer489->Add( m_staticTextDrift, 0, wxALL, 2 );
 
-	m_spCurDrift = new wxSpinCtrlDouble( sbSizer452->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS, 0, 38, 0.500000, 0.1 );
+	m_spCurDrift = new wxSpinCtrlDouble( sbSizer452->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS|wxSP_WRAP, 0, 38, 0.500000, 0.1 );
 	m_spCurDrift->SetDigits( 2 );
 	m_spCurDrift->SetForegroundColour( wxSystemSettings::GetColour( wxSYS_COLOUR_BTNTEXT ) );
 	m_spCurDrift->SetBackgroundColour( wxSystemSettings::GetColour( wxSYS_COLOUR_APPWORKSPACE ) );
@@ -2862,7 +2862,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	fgSizer489->Add( m_staticText4133, 0, wxALIGN_CENTER_VERTICAL|wxALL, 2 );
 
-	m_spS_TWS = new wxSpinCtrlDouble( sbSizer452->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS, 0, 230, 0.000000, 0.1 );
+	m_spS_TWS = new wxSpinCtrlDouble( sbSizer452->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS|wxSP_WRAP, 0, 230, 0.000000, 0.1 );
 	m_spS_TWS->SetDigits( 2 );
 	m_spS_TWS->SetForegroundColour( wxSystemSettings::GetColour( wxSYS_COLOUR_BTNTEXT ) );
 	m_spS_TWS->SetBackgroundColour( wxSystemSettings::GetColour( wxSYS_COLOUR_APPWORKSPACE ) );
@@ -2904,7 +2904,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	fgSizer489->Add( m_staticText41341111, 0, wxALL, 2 );
 
-	m_spS_AWS = new wxSpinCtrlDouble( sbSizer452->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS, -230, 230, 0.000000, 0.1 );
+	m_spS_AWS = new wxSpinCtrlDouble( sbSizer452->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS|wxSP_WRAP, -230, 230, 0.000000, 0.1 );
 	m_spS_AWS->SetDigits( 2 );
 	m_spS_AWS->SetForegroundColour( wxSystemSettings::GetColour( wxSYS_COLOUR_BTNTEXT ) );
 	m_spS_AWS->SetBackgroundColour( wxSystemSettings::GetColour( wxSYS_COLOUR_APPWORKSPACE ) );
@@ -2925,10 +2925,10 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 	fgSizer491->Add( sbSizer452, 1, wxEXPAND, 2 );
 
 	wxStaticBoxSizer* sbSizer453;
-	sbSizer453 = new wxStaticBoxSizer( new wxStaticBox( m_panelTest, wxID_ANY, _("Menu Item Not Impl yet Selector") ), wxVERTICAL );
+	sbSizer453 = new wxStaticBoxSizer( new wxStaticBox( m_panelTest, wxID_ANY, _("will be Use Static Selector") ), wxVERTICAL );
 
 	wxFlexGridSizer* fgSizer4811;
-	fgSizer4811 = new wxFlexGridSizer( 0, 3, 0, 0 );
+	fgSizer4811 = new wxFlexGridSizer( 12, 1, 0, 0 );
 	fgSizer4811->SetFlexibleDirection( wxBOTH );
 	fgSizer4811->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 
@@ -2936,7 +2936,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 	sbSizer453->Add( fgSizer4811, 1, wxEXPAND, 2 );
 
 	wxFlexGridSizer* fgSizer4823;
-	fgSizer4823 = new wxFlexGridSizer( 0, 2, 0, 0 );
+	fgSizer4823 = new wxFlexGridSizer( 0, 1, 0, 0 );
 	fgSizer4823->SetFlexibleDirection( wxBOTH );
 	fgSizer4823->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 
@@ -2946,86 +2946,59 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	fgSizer4823->Add( m_cbSHDT, 0, wxALL, 2 );
 
-	m_cbSpare = new wxCheckBox( sbSizer453->GetStaticBox(), wxID_ANY, _("Depth Below Txd"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
-	m_cbSpare->SetValue(true);
-	fgSizer4823->Add( m_cbSpare, 0, wxALL, 2 );
-
 	m_cbSSTW = new wxCheckBox( sbSizer453->GetStaticBox(), wxID_ANY, _("Speed Through Water"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbSSTW->SetValue(true);
 	m_cbSSTW->SetToolTip( _("Tick to select  speed through water") );
 
 	fgSizer4823->Add( m_cbSSTW, 0, wxALL, 2 );
 
-	m_cbSpare2 = new wxCheckBox( sbSizer453->GetStaticBox(), wxID_ANY, _("Depth Below Wl"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
-	m_cbSpare2->SetValue(true);
-	fgSizer4823->Add( m_cbSpare2, 0, wxALL, 2 );
-
 	m_cbSCOG = new wxCheckBox( sbSizer453->GetStaticBox(), wxID_ANY, _("Course Over Ground"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbSCOG->SetValue(true);
 	fgSizer4823->Add( m_cbSCOG, 0, wxALL, 2 );
-
-
-	fgSizer4823->Add( 0, 0, 1, wxEXPAND, 5 );
 
 	m_cbSHDM = new wxCheckBox( sbSizer453->GetStaticBox(), wxID_ANY, _("Heading Magnetic"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbSHDM->SetValue(true);
 	fgSizer4823->Add( m_cbSHDM, 0, wxALL, 2 );
 
-
-	fgSizer4823->Add( 0, 0, 1, wxEXPAND, 5 );
-
 	m_cbSHDG = new wxCheckBox( sbSizer453->GetStaticBox(), wxID_ANY, _("Magnetic Variation"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbSHDG->SetValue(true);
 	fgSizer4823->Add( m_cbSHDG, 0, wxALL, 2 );
-
-
-	fgSizer4823->Add( 0, 0, 1, wxEXPAND, 5 );
 
 	m_cbSSOG = new wxCheckBox( sbSizer453->GetStaticBox(), wxID_ANY, _("Speed Over Ground"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbSSOG->SetValue(true);
 	fgSizer4823->Add( m_cbSSOG, 0, wxALL, 2 );
 
-
-	fgSizer4823->Add( 0, 0, 1, wxEXPAND, 5 );
-
 	m_cbSSet = new wxCheckBox( sbSizer453->GetStaticBox(), wxID_ANY, _("Set current direction"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbSSet->SetValue(true);
 	fgSizer4823->Add( m_cbSSet, 0, wxALL, 2 );
-
-
-	fgSizer4823->Add( 0, 0, 1, wxEXPAND, 5 );
 
 	m_cbSDrift = new wxCheckBox( sbSizer453->GetStaticBox(), wxID_ANY, _("Drift (current speed)"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbSDrift->SetValue(true);
 	fgSizer4823->Add( m_cbSDrift, 0, wxALL, 2 );
 
-
-	fgSizer4823->Add( 0, 0, 1, wxEXPAND, 5 );
-
 	m_cbSTWA = new wxCheckBox( sbSizer453->GetStaticBox(), wxID_ANY, _("True Wind Angle"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbSTWA->SetValue(true);
 	fgSizer4823->Add( m_cbSTWA, 0, wxALL, 2 );
-
-
-	fgSizer4823->Add( 0, 0, 1, wxEXPAND, 5 );
 
 	m_cbSTWS = new wxCheckBox( sbSizer453->GetStaticBox(), wxID_ANY, _("True Wind Speed"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbSTWS->SetValue(true);
 	fgSizer4823->Add( m_cbSTWS, 0, wxALL, 2 );
 
-
-	fgSizer4823->Add( 0, 0, 1, wxEXPAND, 5 );
-
 	m_cbSAWA = new wxCheckBox( sbSizer453->GetStaticBox(), wxID_ANY, _("Apparent Wind Angle"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbSAWA->SetValue(true);
 	fgSizer4823->Add( m_cbSAWA, 0, wxALL, 2 );
 
-
-	fgSizer4823->Add( 0, 0, 1, wxEXPAND, 2 );
-
 	m_cbSAWS = new wxCheckBox( sbSizer453->GetStaticBox(), wxID_ANY, _("Apparent Wind Speed"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_cbSAWS->SetValue(true);
 	fgSizer4823->Add( m_cbSAWS, 0, wxALL, 2 );
+
+	m_cbSPITCH1 = new wxCheckBox( sbSizer453->GetStaticBox(), wxID_ANY, _("Pitch"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
+	m_cbSPITCH1->SetValue(true);
+	fgSizer4823->Add( m_cbSPITCH1, 0, wxALL, 2 );
+
+	m_cbSHeel1 = new wxCheckBox( sbSizer453->GetStaticBox(), wxID_ANY, _("Heel"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
+	m_cbSHeel1->SetValue(true);
+	fgSizer4823->Add( m_cbSHeel1, 0, wxALL, 2 );
 
 
 	sbSizer453->Add( fgSizer4823, 1, wxEXPAND, 2 );
@@ -3063,7 +3036,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	fgSizer48111->Add( m_staticTDBT2, 0, wxALL, 2 );
 
-	m_spS_WaterT1 = new wxSpinCtrlDouble( sbSizer454->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS, -38, 55, 18.1, 0.01 );
+	m_spS_WaterT1 = new wxSpinCtrlDouble( sbSizer454->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxSP_ARROW_KEYS, -38, 55, 18.1, 0.01 );
 	m_spS_WaterT1->SetDigits( 2 );
 	m_spS_WaterT1->SetToolTip( _("Set Water Temp") );
 
@@ -3095,13 +3068,13 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	fgSizer48111->Add( m_staticTDPT, 0, wxALL, 2 );
 
-	m_spDPT = new wxSpinCtrlDouble( sbSizer454->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS|wxSP_WRAP, 0, 90, 3, 0.1 );
+	m_spDPT = new wxSpinCtrlDouble( sbSizer454->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxSP_ARROW_KEYS|wxSP_WRAP, 0, 90, 0.3, 0.1 );
 	m_spDPT->SetDigits( 1 );
 	m_spDPT->SetToolTip( _("Set Water Depth, usually it is really the depth Below Transducer + Fixed Distance from Transduce to waterline") );
 
 	fgSizer48111->Add( m_spDPT, 0, wxALL, 2 );
 
-	m_staticText431111 = new wxStaticText( sbSizer454->GetStaticBox(), wxID_ANY, _("m (SI)"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText431111 = new wxStaticText( sbSizer454->GetStaticBox(), wxID_ANY, _("ft"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_staticText431111->Wrap( -1 );
 	fgSizer48111->Add( m_staticText431111, 0, wxALL, 2 );
 
@@ -3143,7 +3116,7 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	fgSizer48111->Add( m_staticTDPT111, 0, wxALL, 2 );
 
-	m_spHeel = new wxSpinCtrlDouble( sbSizer454->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS|wxSP_WRAP, -180, 180, 0, 0.1 );
+	m_spHeel = new wxSpinCtrlDouble( sbSizer454->GetStaticBox(), wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxALIGN_RIGHT|wxSP_ARROW_KEYS|wxSP_WRAP, -180, 180, 0, 0.1 );
 	m_spHeel->SetDigits( 1 );
 	m_spHeel->SetToolTip( _("Set Pitch + is nose up ") );
 
@@ -3170,6 +3143,17 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 
 	fgSizer491->Add( sbSizer454, 1, wxEXPAND, 2 );
+
+	m_sdbSizer511 = new wxStdDialogButtonSizer();
+	m_sdbSizer511OK = new wxButton( m_panelTest, wxID_OK );
+	m_sdbSizer511->AddButton( m_sdbSizer511OK );
+	m_sdbSizer511Apply = new wxButton( m_panelTest, wxID_APPLY );
+	m_sdbSizer511->AddButton( m_sdbSizer511Apply );
+	m_sdbSizer511Cancel = new wxButton( m_panelTest, wxID_CANCEL );
+	m_sdbSizer511->AddButton( m_sdbSizer511Cancel );
+	m_sdbSizer511->Realize();
+
+	fgSizer491->Add( m_sdbSizer511, 1, wxEXPAND, 5 );
 
 
 	m_panelTest->SetSizer( fgSizer491 );
@@ -3665,15 +3649,15 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 	m_cbOptimize112->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbXDRVPitch->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbOptimize113->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbXDRVRoll->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbOptimize121->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbXDRVHeel->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbOptimize131->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_cbOptimize121->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbXDREngT1->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbOptimize141->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_cbOptimize131->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbXDREngT2->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbOptimize181->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_cbOptimize141->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbTWS1->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_cbOptimize181->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_cbXDRVRoll->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbOptimize151->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbAWA1->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbOptimize191->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
@@ -3694,14 +3678,12 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 	m_cbXDRVTG->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbXDRVWR->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbXDRVWT->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbXDRXDR->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_bXDRONOFF->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbMode->Connect( wxEVT_COMMAND_CHOICEBOOK_PAGE_CHANGED, wxChoicebookEventHandler( SimulatorBase::OnMode ), NULL, this );
 	m_button4->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( SimulatorBase::OnInformation ), NULL, this );
 	m_sdbSizer1OK->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( SimulatorBase::OnOk ), NULL, this );
 	m_cbSHDT->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbSpare->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbSSTW->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbSpare2->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbSCOG->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbSHDM->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbSHDG->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
@@ -3712,6 +3694,8 @@ SimulatorBase::SimulatorBase( wxWindow* parent, wxWindowID id, const wxString& t
 	m_cbSTWS->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbSAWA->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbSAWS->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_cbSPITCH1->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_cbSHeel1->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbHDT511->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbDetect521->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbCOG511->Connect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
@@ -3781,15 +3765,15 @@ SimulatorBase::~SimulatorBase()
 	m_cbOptimize112->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbXDRVPitch->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbOptimize113->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbXDRVRoll->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbOptimize121->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbXDRVHeel->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbOptimize131->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_cbOptimize121->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbXDREngT1->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbOptimize141->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_cbOptimize131->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbXDREngT2->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbOptimize181->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_cbOptimize141->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbTWS1->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_cbOptimize181->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_cbXDRVRoll->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbOptimize151->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbAWA1->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbOptimize191->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
@@ -3810,14 +3794,12 @@ SimulatorBase::~SimulatorBase()
 	m_cbXDRVTG->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbXDRVWR->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbXDRVWT->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbXDRXDR->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_bXDRONOFF->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbMode->Disconnect( wxEVT_COMMAND_CHOICEBOOK_PAGE_CHANGED, wxChoicebookEventHandler( SimulatorBase::OnMode ), NULL, this );
 	m_button4->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( SimulatorBase::OnInformation ), NULL, this );
 	m_sdbSizer1OK->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( SimulatorBase::OnOk ), NULL, this );
 	m_cbSHDT->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbSpare->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbSSTW->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
-	m_cbSpare2->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbSCOG->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbSHDM->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbSHDG->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
@@ -3828,6 +3810,8 @@ SimulatorBase::~SimulatorBase()
 	m_cbSTWS->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbSAWA->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbSAWS->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_cbSPITCH1->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
+	m_cbSHeel1->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbHDT511->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbDetect521->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
 	m_cbCOG511->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( SimulatorBase::OnUpdate ), NULL, this );
@@ -4213,7 +4197,7 @@ SimulatorPreferences::SimulatorPreferences( wxWindow* parent, wxWindowID id, con
 
 	m_bUseXDRPR = new wxCheckBox( sbSizer6111->GetStaticBox(), wxID_ANY, _("IIXDR Pitch + Heel On/Off"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_bUseXDRPR->SetValue(true);
-	m_bUseXDRPR->SetToolTip( _("Pitch and Heel Message") );
+	m_bUseXDRPR->SetToolTip( _("Pitch and Heel (Roll) Message") );
 
 	fgSizer6611->Add( m_bUseXDRPR, 0, wxALL, 2 );
 
@@ -4237,13 +4221,13 @@ SimulatorPreferences::SimulatorPreferences( wxWindow* parent, wxWindowID id, con
 
 	m_bUseXDRMB = new wxCheckBox( sbSizer6111->GetStaticBox(), wxID_ANY, _("IIXDR Barometer On/Off"), wxDefaultPosition, wxDefaultSize, 0 );
 	m_bUseXDRMB->SetValue(true);
-	m_bUseXDRMB->SetToolTip( _("$IIXDR Barometer") );
+	m_bUseXDRMB->SetToolTip( _("$IIXDR Barometer message") );
 
 	fgSizer6611->Add( m_bUseXDRMB, 0, wxALL, 2 );
 
 	m_bUseDBT = new wxCheckBox( sbSizer6111->GetStaticBox(), wxID_ANY, _("DBT  (Sounding) On/Off"), wxDefaultPosition, wxDefaultSize, wxCHK_2STATE );
 	m_bUseDBT->SetValue(true);
-	m_bUseDBT->SetToolTip( _("Depth Sounding below transducer value") );
+	m_bUseDBT->SetToolTip( _("Depth Below Transducer") );
 
 	fgSizer6611->Add( m_bUseDBT, 0, wxALL, 2 );
 
@@ -4280,6 +4264,8 @@ SimulatorPreferences::SimulatorPreferences( wxWindow* parent, wxWindowID id, con
 	m_sdbSizer = new wxStdDialogButtonSizer();
 	m_sdbSizerOK = new wxButton( sbSizer50->GetStaticBox(), wxID_OK );
 	m_sdbSizer->AddButton( m_sdbSizerOK );
+	m_sdbSizerApply = new wxButton( sbSizer50->GetStaticBox(), wxID_APPLY );
+	m_sdbSizer->AddButton( m_sdbSizerApply );
 	m_sdbSizerCancel = new wxButton( sbSizer50->GetStaticBox(), wxID_CANCEL );
 	m_sdbSizer->AddButton( m_sdbSizerCancel );
 	m_sdbSizer->Realize();
